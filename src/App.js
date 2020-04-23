@@ -3,23 +3,30 @@ import "./App.css";
 import Countdown from "./components/Countdown";
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
+  constructor(props) {
+    super(props);
 
-  //   this.state = {
-  //     count: moment().format("LTS"),
-  //     timeout: true,
-  //   };
+    this.state = {
+      timeout: false,
+    };
 
-  //   // this.counter = this.counter.bind(this);
-  // }
+    this.counter = this.counter.bind(this);
+  }
+
+  counter(data) {
+    this.setState({
+      timeout: data,
+    });
+  }
 
   render() {
     return (
       <div className="App">
-        <Countdown />
-
-        <div className="awesome-page">AWESOME!!!</div>
+        {!this.state.timeout ? (
+          <Countdown counter={this.counter} />
+        ) : (
+          <div className="awesome-page">AWESOME!!!</div>
+        )}
       </div>
     );
   }

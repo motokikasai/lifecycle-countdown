@@ -1,5 +1,11 @@
 @import "./components/Countdown/_style.scss";
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 .awesome-page {
   font-size: 5rem;
   color: rgb(255, 255, 255);
