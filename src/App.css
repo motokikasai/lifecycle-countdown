@@ -1,1 +1,14 @@
 @import "./components/Countdown/_style.scss";
+
+.awesome-page {
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 10px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/bg-fireworks.jpg");
+  background-size: cover;
+}

@@ -13,7 +13,12 @@
 
 .counter {
   font-size: 2rem;
-  background: rgb(170, 170, 170);
+  background: rgb(41, 41, 41);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .content {
