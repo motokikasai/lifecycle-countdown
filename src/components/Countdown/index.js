@@ -1,7 +1,8 @@
 import React from "react";
+// import PropTypes from "prop-types";
 import moment from "moment";
 
-class Counter extends React.Component {
+class Countdown extends React.Component {
   constructor(props) {
     super(props);
 
@@ -27,7 +28,7 @@ class Counter extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log(this.state.count);
+    console.log("INTERVAL CLEARED!!🌞");
     clearInterval(this.counterInterval);
   }
 
@@ -42,15 +43,20 @@ class Counter extends React.Component {
           <div className="seconds">2 days</div> */}
         </section>
         <section className="content">
-          <div className="main-header">Coming soon...</div>
-          <div className="subheader">Stick around and be one of the first</div>
+          <div className="main-header">{this.props.header}</div>
+          <div className="subheader">{this.props.subheader}</div>
         </section>
       </div>
     );
   }
 }
 
-export default Counter;
+Countdown.defaultProps = {
+  header: "Coming soon...",
+  subheader: "Stick around and be one of the first",
+};
+
+export default Countdown;
 
 // CountDown.defaultProps = {}
 // CountDown.defaultProps = {title: ‘Coming soon’}

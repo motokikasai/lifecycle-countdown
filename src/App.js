@@ -23,7 +23,11 @@ class App extends React.Component {
     return (
       <div className="App">
         {!this.state.timeout ? (
-          <Countdown counter={this.counter} />
+          <Countdown
+            counter={this.counter}
+            header="Confucius says..."
+            subheader="Choose a Job You Love, and You Will Never Have To Work a Day in Your Life"
+          />
         ) : (
           <div className="awesome-page">AWESOME!!!</div>
         )}
