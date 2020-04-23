@@ -21,6 +21,13 @@
   justify-content: center;
 }
 
+.light {
+  background: url("../../assets/bg-beach.jpg");
+  background-size: cover;
+  color: rgb(29, 29, 29);
+  font-weight: bold;
+}
+
 .content {
   flex: 2;
   display: flex;
