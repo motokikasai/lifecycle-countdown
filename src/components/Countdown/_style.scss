@@ -14,7 +14,7 @@
 
 .counter {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: lighter;
   background: rgb(31, 31, 31);
   color: white;
   display: flex;
@@ -62,4 +62,9 @@
   font-size: 2rem;
   font-weight: lighter;
   margin: 40px 0;
+}
+
+.time-counted {
+  font-size: 2rem;
+  font-weight: 600;
 }

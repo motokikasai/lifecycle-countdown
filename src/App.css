@@ -7,7 +7,7 @@
 }
 
 .awesome-page {
-  font-size: 5rem;
+  font-size: 7rem;
   color: rgb(255, 255, 255);
   text-shadow: 3px 3px 10px black;
   display: flex;
@@ -15,6 +15,21 @@
   align-items: center;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./assets/bg-fireworks.jpg");
-  background-size: cover;
+    url("./assets/bg-fireworks.jpg") center center no-repeat;
+  background-size: 150%;
+  background-position: 50%;
+  /* background-size: cover; */
+  animation: background 20s ease-in-out alternate infinite;
+}
+
+@keyframes background {
+  0% {
+    background-position: 0%;
+    /* transform: rotateY(-65%); */
+  }
+
+  100% {
+    background-position: 50%;
+    /* transform: rotateY(65%); */
+  }
 }

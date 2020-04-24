@@ -1,6 +1,12 @@
 import React from "react";
 import "./App.css";
 import Countdown from "./components/Countdown";
+import styled, { keyframes } from "styled-components";
+import { zoomInDown } from "react-animations";
+
+const ZoomInDown = styled.div`
+  animation: 2s ${keyframes`${zoomInDown}`};
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -31,7 +37,9 @@ class App extends React.Component {
             backgroundImage={true}
           />
         ) : (
-          <div className="awesome-page">AWESOME!!</div>
+          <div className="awesome-page">
+            <ZoomInDown>AWESOME!!</ZoomInDown>
+          </div>
         )}
       </div>
     );
