@@ -8,7 +8,7 @@ class Countdown extends React.Component {
 
     this.state = {
       count: 10,
-      theme: this.props.theme,
+      bg: this.props.backgroundImage,
     };
   }
 
@@ -36,7 +36,11 @@ class Countdown extends React.Component {
   render() {
     return (
       <div className="container">
-        <section className={`counter ${this.state.theme}`}>
+        <section
+          className={`counter ${this.props.theme} ${
+            this.state.bg && "bg-image"
+          }`}
+        >
           {this.state.count}
           {/* <div className="days">155 days</div>
           <div className="hours">1 days</div>

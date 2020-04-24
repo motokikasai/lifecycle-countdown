@@ -28,9 +28,10 @@ class App extends React.Component {
             header="Confucius says..."
             subheader="Choose a Job You Love, and You Will Never Have To Work a Day in Your Life"
             theme="light"
+            backgroundImage={true}
           />
         ) : (
-          <div className="awesome-page">AWESOME!!!</div>
+          <div className="awesome-page">AWESOME!!</div>
         )}
       </div>
     );

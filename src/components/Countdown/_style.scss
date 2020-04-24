@@ -9,11 +9,13 @@
   align-items: center;
   height: 100vh;
   padding: 20px;
+  color: rgb(31, 31, 31);
 }
 
 .counter {
   font-size: 2rem;
-  background: rgb(41, 41, 41);
+  font-weight: bold;
+  background: rgb(31, 31, 31);
   color: white;
   display: flex;
   flex-direction: column;
@@ -22,10 +24,25 @@
 }
 
 .light {
-  background: url("../../assets/bg-beach.jpg");
+  background: #efeeee;
   background-size: cover;
   color: rgb(29, 29, 29);
-  font-weight: bold;
+}
+
+.bg-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../assets/bg-beach.jpg");
+  background-size: cover;
+}
+
+.light.bg-image {
+  background: linear-gradient(
+      rgba(199, 199, 199, 0.6),
+      rgba(199, 199, 199, 0.6)
+    ),
+    url("../../assets/bg-beach.jpg");
+  background-size: cover;
+  color: rgb(29, 29, 29);
 }
 
 .content {
