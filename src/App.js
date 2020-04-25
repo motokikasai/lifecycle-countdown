@@ -38,7 +38,12 @@ class App extends React.Component {
           />
         ) : (
           <div className="awesome-page">
-            <ZoomInDown>AWESOME!!</ZoomInDown>
+            <ZoomInDown>
+              AWESOME!
+              <span role="img" aria-label="fireworks">
+                🎉
+              </span>
+            </ZoomInDown>
           </div>
         )}
       </div>

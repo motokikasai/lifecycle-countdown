@@ -6,10 +6,11 @@ class Countdown extends React.Component {
   constructor(props) {
     super(props);
 
-    const difference = new Date("2020-04-26T00:00:00") - new Date();
+    this.deadline = "2020-04-25T14:35:00";
+    const difference = new Date(this.deadline) - new Date();
 
     this.state = {
-      count: 10, //-> for testing purpose
+      // count: 10, //-> for testing purpose
       bg: this.props.backgroundImage,
       remaining: {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -23,7 +24,7 @@ class Countdown extends React.Component {
   }
 
   timer() {
-    const difference = new Date("2020-04-24T23:35:50") - new Date();
+    const difference = new Date(this.deadline) - new Date();
 
     this.setState({
       remaining: {
@@ -38,21 +39,21 @@ class Countdown extends React.Component {
   componentDidMount() {
     this.counterInterval = setInterval(() => {
       // LOGIC FOR TEXT (10s) -----------------
-      if (this.state.count > 0) {
-        this.setState((state) => {
-          return {
-            count: state.count - 1,
-          };
-        });
-      } else {
-        return this.props.counter(true);
-      }
+      // if (this.state.count > 0) {
+      //   this.setState((state) => {
+      //     return {
+      //       count: state.count - 1,
+      //     };
+      //   });
+      // } else {
+      //   return this.props.counter(true);
+      // }
 
       // LOGIC FOR REAL-TIME (new Date()) ----
 
-      // Object.values(this.state.remaining).toString() !== [0, 0, 0, 0].toString()
-      //   ? this.timer()
-      //   : this.props.counter(true);
+      Object.values(this.state.remaining).toString() !== [0, 0, 0, 0].toString()
+        ? this.timer()
+        : this.props.counter(true);
     }, 1000);
   }
 
