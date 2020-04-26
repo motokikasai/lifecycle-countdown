@@ -33,7 +33,7 @@ class App extends React.Component {
             counter={this.counter}
             header="Confucius says..."
             subheader="Choose a Job You Love, and You Will Never Have To Work a Day in Your Life"
-            theme="light"
+            // theme="light"
             backgroundImage={true}
           />
         ) : (

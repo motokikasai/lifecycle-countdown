@@ -6,7 +6,7 @@ class Countdown extends React.Component {
   constructor(props) {
     super(props);
 
-    this.deadline = "2020-04-25T14:35:00";
+    this.deadline = "2020-04-26T17:33:00";
     const difference = new Date(this.deadline) - new Date();
 
     this.state = {
